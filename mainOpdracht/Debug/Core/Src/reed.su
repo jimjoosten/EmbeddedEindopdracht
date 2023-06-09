@@ -1,0 +1,2 @@
+../Core/Src/reed.c:6:15:REED_status	8	static
+../Core/Src/reed.c:12:6:Read_Reed	8	static

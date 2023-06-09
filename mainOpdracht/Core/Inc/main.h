@@ -61,6 +61,8 @@ void Error_Handler(void);
 #define LED_RED_GPIO_Port GPIOC
 #define POTMETER_Pin GPIO_PIN_1
 #define POTMETER_GPIO_Port GPIOC
+#define REED_Pin GPIO_PIN_3
+#define REED_GPIO_Port GPIOC
 #define ROTARY1_Pin GPIO_PIN_11
 #define ROTARY1_GPIO_Port GPIOC
 #define ROTARY2_Pin GPIO_PIN_12

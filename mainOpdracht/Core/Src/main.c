@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "rotary.h"
+#include "reed.h"
 
 /* USER CODE END Includes */
 
@@ -214,8 +215,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_RED_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : POTMETER_Pin ROTARY1_Pin ROTARY2_Pin */
-  GPIO_InitStruct.Pin = POTMETER_Pin|ROTARY1_Pin|ROTARY2_Pin;
+  /*Configure GPIO pins : POTMETER_Pin REED_Pin ROTARY1_Pin ROTARY2_Pin */
+  GPIO_InitStruct.Pin = POTMETER_Pin|REED_Pin|ROTARY1_Pin|ROTARY2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
