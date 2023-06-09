@@ -98,6 +98,7 @@ int main(void)
   while (1)
   {
     Read_Rotary();
+    Read_Reed();
     // test
     /* USER CODE END WHILE */
 
