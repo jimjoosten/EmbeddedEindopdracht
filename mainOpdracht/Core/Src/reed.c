@@ -19,7 +19,7 @@ void Read_Reed()
 		printf("Reed heeft nu contact");
 		bHasContact = true;
 	}
-	else if (REED_STATUS() && bHasContact)
+	else if (REED_status() && bHasContact)
 	{
 		printf("Reed heeft geen contact");
 		bHasContact = false;
