@@ -1,9 +1,9 @@
 #include "reed.h"
 #include "main.h"
 #include <stdio.h>
+#include <stdbool.h>
 
-
-
+bool bHasContact = false;
 
 GPIO_PinState REED_status()
 {
@@ -13,23 +13,15 @@ GPIO_PinState REED_status()
 
 void Read_Reed()
 {
-	#if 1
-		if (!REED_status())
-		{
-			printf("Reed heeft nu contact");
-		}
-		else
-		{
-			printf("Reed heeft geen contact");
-		}
-	#else
-		if (!REED_status())
-		{
-			printf("Reed heeft nu contact");
-		}
-		else
-		{
-			printf("Reed heeft geen contact");
-		}
-	#endif
+
+	if (!REED_status() && !bHasContact)
+	{
+		printf("Reed heeft nu contact");
+		bHasContact = true;
+	}
+	else if (REED_STATUS() && bHasContact)
+	{
+		printf("Reed heeft geen contact");
+		bHasContact = false;
+	}
 }
