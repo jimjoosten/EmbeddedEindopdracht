@@ -65,6 +65,8 @@ void Error_Handler(void);
 #define REED_GPIO_Port GPIOC
 #define BUZZER_GROVE_Pin GPIO_PIN_0
 #define BUZZER_GROVE_GPIO_Port GPIOB
+#define RELAY_Pin GPIO_PIN_10
+#define RELAY_GPIO_Port GPIOA
 #define ROTARY1_Pin GPIO_PIN_11
 #define ROTARY1_GPIO_Port GPIOC
 #define ROTARY2_Pin GPIO_PIN_12
