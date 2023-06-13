@@ -1,2 +1,2 @@
-reed.c:6:15:REED_status	1
-reed.c:12:6:Read_Reed	2
+reed.c:8:15:REED_status	1
+reed.c:14:6:Read_Reed	5

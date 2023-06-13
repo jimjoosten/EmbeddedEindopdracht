@@ -540,8 +540,8 @@ __STATIC_FORCEINLINE void __disable_irq(void)
 	...
 
 08000420 <REED_status>:
-#include "main.h"
-#include <stdio.h>
+
+
 
 
 GPIO_PinState REED_status()
