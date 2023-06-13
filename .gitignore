@@ -96,3 +96,5 @@ mainOpdracht/Debug/USB_Device/App/usbd_cdc_if.o
 mainOpdracht/Debug/USB_Device/App/usbd_desc.o
 mainOpdracht/Debug/USB_Device/Target/subdir.mk
 mainOpdracht/Debug/USB_Device/Target/usbd_conf.o
+mainOpdracht/Debug/mainOpdracht.map
+mainOpdracht/Debug/mainOpdracht.list
