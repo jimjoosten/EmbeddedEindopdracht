@@ -20,7 +20,11 @@ void SetTimer() {
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	printf("Timer is gestart!");
+	if (!bHasContact) { // kijken of contact is anders starten we het alarm.
+		printf("Timer is gestart!");
+		// Trigger function
+		StartAlarm();
+	}
 }
 
 
