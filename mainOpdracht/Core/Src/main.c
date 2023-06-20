@@ -26,6 +26,7 @@
 #include "reed.h"
 #include "buzzer.h"
 #include "relay.h"
+#include <stdbool.h>
 
 /* USER CODE END Includes */
 
@@ -61,6 +62,16 @@ static void MX_TIM16_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+bool bAlarmGestart = false;
+
+void StartAlarm() {
+	if(!bAlarmGestart) {
+		printf("Alarm aan het starten....");
+		bAlarmGestart = true;
+	  // set state of bool
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -107,11 +118,17 @@ int main(void)
 //	Play_Buzzer();
     Read_Rotary();
     Read_Reed();
+
+    if (bAlarmGestart) {
+    	printf("lekker man alarm gestart");
+    	Play_Buzzer();
+    }
     // test
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
+
   /* USER CODE END 3 */
 }
 
