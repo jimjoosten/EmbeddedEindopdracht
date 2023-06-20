@@ -1,2 +1,3 @@
-reed.c:8:15:REED_status	1
-reed.c:14:6:Read_Reed	5
+reed.c:11:15:REED_status	1
+reed.c:16:6:SetTimer	2
+reed.c:37:6:Read_Reed	5

@@ -62,7 +62,7 @@ void Read_Rotary()
     }
     prevVal = newVal;
 
-    if (iTimer > 15000)
+    if (iTimer > 20000)
     {
         printf("De teller is: %d\r\n", readValue);
         iTimer = 0;

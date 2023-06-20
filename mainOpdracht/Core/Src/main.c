@@ -102,6 +102,7 @@ int main(void)
   {
 	Relay_On();
 	Play_Buzzer();
+	//Play_Buzzer();
     Read_Rotary();
     Read_Reed();
     // test

@@ -2,6 +2,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdbool.h>
+#include <time.h>
+#include <unistd.h>
 
 bool bHasContact = false;
 
@@ -18,10 +20,15 @@ void Read_Reed()
 	{
 		printf("Reed heeft nu contact");
 		bHasContact = true;
+		isTimerOn = false;
 	}
 	else if (REED_status() && bHasContact)
 	{
+		isTimerOn = true;
+		SetTimer();
+
 		printf("Reed heeft geen contact");
 		bHasContact = false;
 	}
+
 }
