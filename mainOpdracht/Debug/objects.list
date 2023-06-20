@@ -1,5 +1,4 @@
 "./Core/Src/buzzer.o"
-"./Core/Src/ledStrip.o"
 "./Core/Src/main.o"
 "./Core/Src/reed.o"
 "./Core/Src/relay.o"

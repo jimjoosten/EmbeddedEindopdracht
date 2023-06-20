@@ -64,8 +64,8 @@ all: main-build
 main-build: mainOpdracht.elf secondary-outputs
 
 # Tool invocations
-mainOpdracht.elf mainOpdracht.map: $(OBJS) $(USER_OBJS) C:\Users\jimjo\OneDrive\ -\ COG\Documenten\2DE\ SCHOOLJAAR\EMBEDDED\PROJECT\ ASTRUM\EmbeddedEindopdracht\mainOpdracht\STM32WB55RGVX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "mainOpdracht.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\jimjo\OneDrive - COG\Documenten\2DE SCHOOLJAAR\EMBEDDED\PROJECT ASTRUM\EmbeddedEindopdracht\mainOpdracht\STM32WB55RGVX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mainOpdracht.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+mainOpdracht.elf mainOpdracht.map: $(OBJS) $(USER_OBJS) C:\Users\jespe\Desktop\School\EMBED\EmbeddedEindopdracht\mainOpdracht\STM32WB55RGVX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "mainOpdracht.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\jespe\Desktop\School\EMBED\EmbeddedEindopdracht\mainOpdracht\STM32WB55RGVX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mainOpdracht.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
