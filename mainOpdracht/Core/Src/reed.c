@@ -6,10 +6,21 @@
 #include <unistd.h>
 
 bool bHasContact = false;
+bool isTimerOn = false;
+extern TIM_HandleTypeDef htim16;
 
 GPIO_PinState REED_status()
 {
     return HAL_GPIO_ReadPin(REED_GPIO_Port, REED_Pin);
+}
+
+void SetTimer() {
+	HAL_TIM_Base_Start_IT(&htim16);
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	printf("Timer is gestart!");
 }
 
 
