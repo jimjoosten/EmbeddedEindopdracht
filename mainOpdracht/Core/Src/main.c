@@ -26,6 +26,7 @@
 #include "reed.h"
 #include "buzzer.h"
 #include "relay.h"
+#include "ledstrip.h"
 #include <stdbool.h>
 
 /* USER CODE END Includes */
@@ -176,23 +177,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  ws2812_SetAll_LED(0, 0, 0);
-  for (int i = 0; i < WS2812_LED_MAX; i++)
-  {
-    ws2812_Set_LED(i, 30, 30, 30);
-    ws2812_Send_PWM();
-    HAL_Delay(500);
-  }
+
 
   while (1)
   {
-	  ws2812_SetAll_LED(30, 0, 0);
-	  ws2812_Send_PWM();
-	  HAL_Delay(1000);
-	  ws2812_SetAll_LED(30, 63, 0);
-	  ws2812_Send_PWM();
-	  HAL_Delay(1000);
-
+	ledstrip_Pulse();
 	Relay_On();
 	Play_Buzzer();
     Read_Rotary();
