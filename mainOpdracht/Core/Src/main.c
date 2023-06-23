@@ -178,14 +178,15 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-
+  ws2812_SetAll_LED(0, 0, 0);
+  ws2812_Send_PWM();
   while (1)
   {
 	ledstrip_Pulse();
-	Relay_On();
-	Play_Buzzer();
-    Read_Rotary();
-    Read_Reed();
+	//Relay_On();
+	//Play_Buzzer();
+    //Read_Rotary();
+    //Read_Reed();
 
     if (bAlarmGestart) {
     	printf("lekker man alarm gestart");
