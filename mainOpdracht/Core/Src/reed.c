@@ -8,6 +8,7 @@
 bool bHasContact = false;
 bool isTimerOn = false;
 extern TIM_HandleTypeDef htim16;
+extern bool buzzerIsPlaying;
 
 GPIO_PinState REED_status()
 {
@@ -34,6 +35,9 @@ void Read_Reed()
 	if (!REED_status() && !bHasContact)
 	{
 		printf("Reed heeft nu contact");
+		ws2812_SetAll_LED(0, 0, 0);
+		ws2812_Send_PWM();
+		buzzerIsPlaying = true;
 		bHasContact = true;
 		isTimerOn = false;
 	}

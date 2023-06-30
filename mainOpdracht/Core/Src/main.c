@@ -186,22 +186,18 @@ int main(void)
   {
 	if(buzzerIsPlaying) {
 		Play_Buzzer(true);
+		Relay_On();
 	}
 	else {
 		Play_Buzzer(false);
+		Relay_Off();
 	}
-	ledstrip_Pulse();
+	//ledstrip_Pulse();
 
-	//Relay_On();
 	//Play_Buzzer();
-    //Read_Rotary();
-    //Read_Reed();
+    Read_Rotary();
+    Read_Reed();
 
-    if (bAlarmGestart) {
-    	printf("lekker man alarm gestart");
-    	Play_Buzzer(true);
-    }
-    // test
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
