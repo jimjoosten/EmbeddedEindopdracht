@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+extern bool buzzerIsPlaying;
+
 void ledstrip_Pulse(){
     if (!HAL_GPIO_ReadPin(ROTARY_SWITCH_GPIO_Port, ROTARY_SWITCH_Pin))
     {
@@ -35,6 +37,8 @@ void ledstrip_Pulse(){
     	ws2812_Set_LED(5, 255, 20, 147);
     	ws2812_Send_PWM();
     	HAL_Delay(1000);
+
+    	buzzerIsPlaying = false;
     }
 
 

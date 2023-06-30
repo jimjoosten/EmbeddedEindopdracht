@@ -127,6 +127,7 @@ void ws2812_Send_PWM(void)
 }
 
 bool bAlarmGestart = false;
+bool buzzerIsPlaying = true;
 
 void StartAlarm() {
 	if(!bAlarmGestart) {
@@ -180,9 +181,17 @@ int main(void)
 
   ws2812_SetAll_LED(0, 0, 0);
   ws2812_Send_PWM();
+
   while (1)
   {
+	if(buzzerIsPlaying) {
+		Play_Buzzer(true);
+	}
+	else {
+		Play_Buzzer(false);
+	}
 	ledstrip_Pulse();
+
 	//Relay_On();
 	//Play_Buzzer();
     //Read_Rotary();
@@ -190,7 +199,7 @@ int main(void)
 
     if (bAlarmGestart) {
     	printf("lekker man alarm gestart");
-    	Play_Buzzer();
+    	Play_Buzzer(true);
     }
     // test
     /* USER CODE END WHILE */
